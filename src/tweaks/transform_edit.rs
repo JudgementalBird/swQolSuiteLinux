@@ -261,12 +261,12 @@ impl Tweak for TransformEditTweak {
             ));
         }
 
-        builder
-            .toggle("Shift Copies Transform", SHIFT_COPY_TRANSFORM_DEFAULTS)
-            .tooltip("If enabled, holding Shift while using Ctrl+Click to eyedrop component will copy the component's transform.")
-            .config_key("shift_copies_transform")
-            .injection(hook_ctrl_click_injection, false)
-            .build()?;
+        //builder
+        //    .toggle("Shift Copies Transform", SHIFT_COPY_TRANSFORM_DEFAULTS)
+        //    .tooltip("If enabled, holding Shift while using Ctrl+Click to eyedrop component will copy the component's transform.")
+        //    .config_key("shift_copies_transform")
+        //    .injection(hook_ctrl_click_injection, false)
+        //    .build()?;
 
         // set_flip function
         #[rustfmt::skip]
