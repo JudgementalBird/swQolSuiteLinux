@@ -32,7 +32,7 @@ impl Tweak for FastLoadingAnimationsTweak {
         let memory_pattern = generate_aob_pattern![
             0x49, 0x8B, 0xD7,                        // MOV    RDX,R15 (unimportant) on 1.13.1
             0xff, 0x90, 0xf0, 0x00, 0x00, 0x00,      // CALL   qword ptr [RAX + 0xf0] (unimportant)
-            0x41, 0xff, 0x85, 0x90, 0xdb, 0x0b, 0x00 // INC    dword ptr [R13 + 0xbdb90] on 1.13.1
+            0x41, 0xff, 0x85, 0xd0, 0xdb, 0x0b, 0x00 // INC    dword ptr [R13 + 0xbdbd0] on 1.13.4
         ];
 
         let menu_fade_injection = builder
@@ -89,7 +89,7 @@ extern "stdcall" fn custom_fade() {
         asm!(
             "mov rdx,r15",                      // original code
             "call [rax + 0xf0]",                // original code
-            "add dword ptr [r13 + 0xbdb90],15", // inc by 15 instead of 1
+            "add dword ptr [r13 + 0xbdbd0],15", // inc by 15 instead of 1 - on 1.13.4
             options(nostack),
         );
     }
