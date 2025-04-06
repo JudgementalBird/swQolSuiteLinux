@@ -1,6 +1,6 @@
-# Attention, this is an [unofficial] repository of the program!
+# Attention, this is a fork of an [unofficial] repository of the program!
 
-A copy of the repository was created in case the original repository was deleted, as well as for the probable support of the program in a working state
+This is a copy of a copy of the repository, created for the purpose of testing around with the possibility of linux support. The main copy was created in case the original repository was deleted, as well as for the probable support of the program in a working state
 
 The original repository (archived) is located here:
 
